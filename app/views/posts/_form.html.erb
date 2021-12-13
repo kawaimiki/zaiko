@@ -31,10 +31,11 @@
     <%= form.text_area :price %>
   </div>
   
-  <%= form_for @post do |f| %>
-  <%= f.file_field :image %>
-  <%= f.submit 'アップロードする'%>
-<% end %>
+  <div class="field">
+  <%= form.label :写真をアップロード %>
+  <br>
+  <%= form.file_field :image %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
