@@ -20,10 +20,10 @@
   <thead>
     <tr>
       <th>image</th>
-      <th>Title</th>
-      <th>Content</th>
-      <th>number</th>
-      <th>price</th>
+      <th><%= sort_link(@q, :title, "title") %></th>
+      <th><%= sort_link(@q, :content, "Content") %></th>
+      <th><%= sort_link(@q, :number, "number") %></th>
+      <th><%= sort_link(@q, :price, "price") %></th>
       <th colspan="3"></th>
     </tr>
   </thead>

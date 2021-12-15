@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :set_q, only: [:index, :search]
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @posts = @q.result
   end
 
   # GET /posts/1 or /posts/1.json
