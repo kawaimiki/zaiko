@@ -36,8 +36,8 @@
         <td><%= post.content %></td>
         <td><%= post.number %></td>
         <td><%= post.price %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></td>
+        <td><%= link_to '編集', edit_post_path(post) %></td>
+        <td><%= link_to '削除', post, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></td>
 
       </tr>
     <% end %>
