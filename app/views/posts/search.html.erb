@@ -1,21 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<h1>販売品一覧</h1>
-  <br>
-<%= link_to 'New Post', new_post_path %>
-  <br>
-  <br>
-
-<h1>検索</h1>
-<%= search_form_for @q, url: search_posts_path do |f| %>
-  <%= f.label :title_cont, '名前' %>
-  <%= f.search_field :title_cont %>
-  <br>
-  <%= f.submit '検索' %>
-<% end %>
-
-  <br>
-
+<h1>検索結果</h1>
 <table>
   <thead>
     <tr>
@@ -29,20 +12,18 @@
   </thead>
 
   <tbody>
-    <% @posts.each do |post| %>
+    <% @results.each do |post| %>
       <tr>
-        <td><%= image_tag post.image.to_s, width: 180, hight:100; %></td>
+        <td><%= image_tag post.image.to_s %></td>
         <td><%= post.title %></td>
         <td><%= post.content %></td>
         <td><%= post.number %></td>
         <td><%= post.price %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></td>
-
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
-
+<%= link_to 'Top', posts_path %>

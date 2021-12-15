@@ -58,3 +58,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'carrierwave', '~> 2.0' 
 gem 'fog-aws'
 gem 'dotenv-rails'
+gem 'ransack'
